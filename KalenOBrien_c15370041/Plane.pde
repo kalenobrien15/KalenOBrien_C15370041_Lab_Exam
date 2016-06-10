@@ -3,7 +3,7 @@ class Plane extends Object {
   Plane(float x, float y) {
     super(x, y);
     speed = 5;
-    ammo =5; 
+    ammo =1; 
   } 
   void update() {
     if (position.x<=width+150) {
@@ -15,14 +15,14 @@ class Plane extends Object {
 
     // Input
     if (ammo > 0) {
-      if (frameCount%20 ==0) {
+     
         if (keys[' ']) {
             Bomb bomb = new Bomb(position.x,position.y);
             objects.add(bomb);
             bomb.alive =true;
             println("bomb");
             ammo--;
-        }
+        
       }
     }
   }

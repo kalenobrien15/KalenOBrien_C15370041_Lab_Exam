@@ -5,6 +5,13 @@ class Person extends Object {
     speed=3;
   } 
   void update() {
+    
+      if(position.x<=bomb.position.x){
+        println("moving");
+       position.x+= speed; 
+      }
+      
+    
   }
 
   void render() {
