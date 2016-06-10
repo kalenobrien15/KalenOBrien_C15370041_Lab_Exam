@@ -19,7 +19,7 @@ class Plane extends Object {
         if (keys[' ']) {
             Bomb bomb = new Bomb(position.x,position.y);
             objects.add(bomb);
-            bomb.alive =true;
+            alive=true;
             println("bomb");
             ammo--;
         
