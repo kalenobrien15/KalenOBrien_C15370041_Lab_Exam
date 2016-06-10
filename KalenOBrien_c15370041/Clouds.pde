@@ -10,7 +10,7 @@ class Clouds extends Object {
    position.x -= speed;
    if(position.x <= -100){
     position.x = origin; 
-    position.y = random(0,200);
+    position.y = random(0,180);
     speed = random(0.5,2);
    }
   }
