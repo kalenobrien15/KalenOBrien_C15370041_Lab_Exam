@@ -52,7 +52,13 @@ void draw() {
     o.render();
     o.update();
   }
-  if (alive=false);
+  if(alive ==true){
+   println("Im alive");
+   
+  }
+  if(alive ==false){
+  println("I'm dead");
+  }
   
 }
 

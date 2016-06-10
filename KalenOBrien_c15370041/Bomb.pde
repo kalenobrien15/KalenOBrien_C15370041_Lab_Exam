@@ -28,6 +28,7 @@ class Bomb extends Object {
           position.y + 5>= person.position.y-5 &&
           position.y - 5<= person.position.y+5) {
           println("collider");
+          alive=false;
           objects.remove(this);
 
           plane.ammo =1;

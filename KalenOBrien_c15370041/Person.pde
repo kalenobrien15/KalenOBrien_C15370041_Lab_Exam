@@ -5,25 +5,21 @@ class Person extends Object {
     speed=3;
   } 
   void update() {
-    
-   if(alive=true){
-    if(position.x<=bomb.position.x){
-     position.x+= speed;
-    } 
-   }
-   if(alive=false){
-    
-     if (person.position.y > starty) {
-            person.position.y -=person.speed;
-          }
-          if (person.position.x> startx) {
-            person.position.x-=person.speed;
-          }
-   }   
-      
-    
-      
-    
+
+    if (alive==true) {
+      if (position.x<=bomb.position.x) {
+        position.x+= speed;
+      }
+    }
+    if (alive==false) {
+
+      if (position.y > starty) {
+        position.y -=speed;
+      }
+      if (position.x> startx) {
+        position.x-=speed;
+      }
+    }
   }
 
   void render() {
