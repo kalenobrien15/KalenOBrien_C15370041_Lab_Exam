@@ -20,23 +20,26 @@ void setup(){
  for(int i =0 ; i <5; i++){
  objects.add( new Clouds(origin+(random(100,250)),random(0,200)));
  }
- plane = new Plane(300,100);
-
+ objects.add( new Plane(300,100));
+ objects.add( new Person(30,400));
 }
 
 void draw() {
 background(background); 
 
+
+
+rectMode(CORNER);
+fill(0,200,0);
+stroke(0,200,0);
+rect(0,300,width,300);
+//plane.render();
+//plane.update();
 for (int i = 0; i < objects.size(); i ++){
  Object o = objects.get(i);
  o.render();
  o.update(); 
 }
 
-rectMode(CORNER);
-fill(0,200,0);
-stroke(0,200,0);
-rect(0,300,width,300);
-plane.render();
-plane.update();
+
 }
