@@ -9,6 +9,7 @@ class Bomb extends Object {
   } 
   void update() {
     if (alive==true) {
+      //The box will fall and keep moving slightly on the x axis as it falls to the ground.
       position.x+= speed;
       position.y+= gravity;
       if (position.y>400) {
@@ -22,7 +23,10 @@ class Bomb extends Object {
         if (position.y> person.position.y) {
           person.position.y+= 2;
         }
-
+        if(position.x< person.position.x){
+          person.position.x -= 2;
+        }
+        // Collider to see if the bomb is within or hitting the player.
         if (position.x + 5>= person.position.x -5&&
           position.x - 5 <= person.position.x +5 &&
           position.y + 5>= person.position.y-5 &&
@@ -30,9 +34,9 @@ class Bomb extends Object {
           println("collider");
           alive=false;
           objects.remove(this);
-
+          
           plane.ammo =1;
-        //  alive=false;
+       
          
         }
       }

@@ -5,14 +5,16 @@ class Person extends Object {
     speed=3;
   } 
   void update() {
-
+    //move to bomb
     if (alive==true) {
       if (position.x<=bomb.position.x) {
         position.x+= speed;
       }
+     
     }
+    //Return to origin position
     if (alive==false) {
-
+  
       if (position.y > starty) {
         position.y -=speed;
       }

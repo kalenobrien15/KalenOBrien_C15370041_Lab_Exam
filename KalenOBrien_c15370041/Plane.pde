@@ -13,9 +13,9 @@ class Plane extends Object {
       position.x = -150;
     }
 
-    // Input
+    // Input, ammo used as an off and on switch so input cant be pressed and spammed until bomb is retreieved.
     if (ammo > 0) {
-     
+         // On space press bomb is made and added to the objects Arraylist, changes the global bool to true and removes the ammo by 1;
         if (keys[' ']) {
             Bomb bomb = new Bomb(position.x,position.y);
             objects.add(bomb);

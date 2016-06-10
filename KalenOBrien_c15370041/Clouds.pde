@@ -8,6 +8,7 @@ class Clouds extends Object {
   }
   void update(){
    position.x -= speed;
+   // Resets as soon as it goes beyond or equal to -100 on the x axis.
    if(position.x <= -100){
     position.x = origin; 
     position.y = random(0,180);
