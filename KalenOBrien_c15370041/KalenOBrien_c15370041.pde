@@ -2,13 +2,23 @@ float origin;
 color background = color(50,150,255);
 ArrayList<Object> objects = new ArrayList<Object>();
 Plane plane;
-Clouds cloud1,cloud2,cloud3,cloud4,cloud5;
+
+boolean [] keys = new boolean[2000];
+
+// Multiple key presses
+void keyPressed(){
+ keys[keyCode]=true; 
+}
+void keyReleased(){
+ keys[keyCode] = false; 
+}
+
 void setup(){
  size(600,600);
  background(background); 
  origin= width+100;
  for(int i =0 ; i <5; i++){
- objects.add( new Clouds(origin+(random(100,150)),random(0,180)));
+ objects.add( new Clouds(origin+(random(100,250)),random(0,200)));
  }
  plane = new Plane(300,100);
 
